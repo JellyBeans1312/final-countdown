@@ -11,11 +11,16 @@ export default {
   components: {
     
   },
-
-  async data() {
-      
-    const data = await getSynonym('thing')
-    return {data}
+  data() {
+    return {
+      synonyms: []
+    }
+  },
+  methods: {
+    findSynonyms: async function(word) {
+      const response = await getSynonyms(word);
+      this.synonyms = response
+    }
   }
 }
 </script>
