@@ -3,16 +3,22 @@
     <div id='lower-container'>
       <Form 
         :findSynonyms='findSynonyms'/>
+      <SynonymList 
+        :synonyms='this.synonyms'
+        :findSynonyms='findSynonyms'
+        />
     </div>
   </div>
 </template>
 
 <script>
 import Form from './components/Form/Form';
+import SynonymList from './components/SynonymList/SynonymList';
 import { getSynonyms } from './apiCalls';
 export default {
   name: 'App',
   components: {
+    SynonymList,
     Form
   },
   data() {
