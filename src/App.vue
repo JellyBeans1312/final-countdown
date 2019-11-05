@@ -1,15 +1,19 @@
 <template>
-  <div id="app">
+  <div id='app'>
+    <div id='lower-container'>
+      <Form 
+        :findSynonyms='findSynonyms'/>
+    </div>
   </div>
 </template>
 
 <script>
-import { getSynonym } from './apiCalls';
-
+import Form from './components/Form/Form';
+import { getSynonyms } from './apiCalls';
 export default {
-  name: 'app',
+  name: 'App',
   components: {
-    
+    Form
   },
   data() {
     return {
