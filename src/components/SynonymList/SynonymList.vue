@@ -1,10 +1,14 @@
 <template>
   <div id='synonym-list' v-if='this.synonyms.length > 0'>
+    <h4>Click on a word to display its synonyms</h4>
     <ul>
       <li 
       v-for='(synonym, index) in this.synonyms' 
       v-bind:key='index'
-      @click.prevent = 'findSynonyms(synonym)'>{{synonym}}
+      @click.prevent='findClickedSynonyms($event, synonym)'
+      @keyup.enter.prevent='findClickedSynonyms($event, synonym)'
+      >
+      {{synonym}}
       </li>
     </ul>
   </div>
@@ -13,6 +17,13 @@
 <script>
 export default {
   name: 'synonymlist',
-  props: ['synonyms', 'findSynonyms']
+  props: ['synonyms'],
+  methods: {
+  findClickedSynonyms(event, word) {
+    this.$emit('find-synonyms', word);
+    this.word = ''
+    event.target.blur();
+  }
+}
 }
 </script>

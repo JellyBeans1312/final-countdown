@@ -4,9 +4,9 @@
       <input
         placeholder='Enter a Word Here!'
         v-model='word'
-        @keyup.enter.prevent="findSynonyms(word)">
+        @keyup.enter.prevent="findSearchedSynonyms(word)">
       <button
-        @click.prevent="findSynonyms(word)">
+        @click.prevent="findSearchedSynonyms(word)">
         Search
       </button>
     </div>
@@ -16,12 +16,15 @@
 <script>
 export default {
   name: 'Form',
-  props: {
-    findSynonyms: { type: Function }
-  },
   data() {
     return {
       word: ''
+    }
+  },
+  methods: {
+    findSearchedSynonyms(word) {
+      this.$emit('find-synonyms', word);
+      this.word = ''
     }
   }
 }
