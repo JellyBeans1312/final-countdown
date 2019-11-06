@@ -29,5 +29,16 @@ export default {
 </script>
 
 <style scoped>
+  section {
+    margin-right: 30px;
+    margin-top: 30px
+  }
 
+  li {
+    list-style-type: none;
+    margin: 10px 3px;
+    border-right: 1px solid black;
+    display: inline;
+    padding: 3px;
+  }
 </style>
