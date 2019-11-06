@@ -35,15 +35,15 @@ export default {
 </script>
 
 <style scoped>
-  #form {
-    margin: 350px 200px;
-    border-right: 1px solid gray;
-    width: 35%;
-  }
   div {
     display: flex;
     padding: 25px;
   }
+
+  #form {
+    border-right: 1px solid gray;
+  }
+  
   #input {
     height: 5vh;
     width: 15rem;
