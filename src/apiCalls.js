@@ -6,6 +6,5 @@ export const getSynonyms = async word => {
     throw Error(`There was an issue returning synonyms for ${word}`)
   }
   const data = await response.json();
-  console.log(data[0].meta.syns[0])
   return data[0].meta.syns[0]
 }
