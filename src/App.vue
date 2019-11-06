@@ -1,14 +1,18 @@
 <template>
   <div id='app'>
-    <div id='lower-container'>
+    <main>
+      <div class='left'>
       <Form 
         @find-synonyms='findSynonyms'
         />
+      </div>
+      <div class='right'>
       <SynonymList 
         :synonyms='this.synonyms'
         @find-synonyms='findSynonyms'
         />
-    </div>
+      </div>
+    </main>
   </div>
 </template>
 
@@ -45,5 +49,18 @@ export default {
 body {
   font-family: Arial;
   line-height: 1.4;
+}
+main {
+  display: flex;
+}
+.left {
+  margin: 350px 150px 0px 200px;
+  width: 35%;
+}
+
+.right {
+  display: flex;
+  margin-top: 330px;
+  margin-left: -15px;
 }
 </style>

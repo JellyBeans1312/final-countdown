@@ -1,5 +1,5 @@
 <template>
-  <div id='synonym-list' v-if='this.synonyms.length > 0'>
+  <section id='synonym-list' v-if='this.synonyms.length > 0'>
     <h4>Click on a word to display its synonyms</h4>
     <ul>
       <li 
@@ -11,7 +11,7 @@
       {{synonym}}
       </li>
     </ul>
-  </div>
+  </section>
 </template>
 
 <script>
@@ -19,11 +19,26 @@ export default {
   name: 'synonymlist',
   props: ['synonyms'],
   methods: {
-  findClickedSynonyms(event, word) {
-    this.$emit('find-synonyms', word);
-    this.word = ''
-    event.target.blur();
+    findClickedSynonyms(event, word) {
+      this.$emit('find-synonyms', word);
+      this.word = ''
+      event.target.blur();
+    }
   }
 }
-}
 </script>
+
+<style scoped>
+  section {
+    margin-right: 30px;
+    margin-top: 30px
+  }
+
+  li {
+    list-style-type: none;
+    margin: 10px 3px;
+    border-right: 1px solid black;
+    display: inline;
+    padding: 3px;
+  }
+</style>
