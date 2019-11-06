@@ -2,10 +2,11 @@
   <div id='app'>
     <div id='lower-container'>
       <Form 
-        :findSynonyms='findSynonyms'/>
+        @find-synonyms='findSynonyms'
+        />
       <SynonymList 
         :synonyms='this.synonyms'
-        :findSynonyms='findSynonyms'
+        @find-synonyms='findSynonyms'
         />
     </div>
   </div>
