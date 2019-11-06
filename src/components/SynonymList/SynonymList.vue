@@ -19,12 +19,12 @@ export default {
   name: 'synonymlist',
   props: ['synonyms'],
   methods: {
-  findClickedSynonyms(event, word) {
-    this.$emit('find-synonyms', word);
-    this.word = ''
-    event.target.blur();
+    findClickedSynonyms(event, word) {
+      this.$emit('find-synonyms', word);
+      this.word = ''
+      event.target.blur();
+    }
   }
-}
 }
 </script>
 
