@@ -1,6 +1,6 @@
 <template>
   <div id='app'>
-    <div id='lower-container'>
+    <main>
       <Form 
         @find-synonyms='findSynonyms'
         />
@@ -8,7 +8,7 @@
         :synonyms='this.synonyms'
         @find-synonyms='findSynonyms'
         />
-    </div>
+    </main>
   </div>
 </template>
 

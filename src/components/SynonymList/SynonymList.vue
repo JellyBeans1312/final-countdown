@@ -1,5 +1,5 @@
 <template>
-  <div id='synonym-list' v-if='this.synonyms.length > 0'>
+  <section id='synonym-list' v-if='this.synonyms.length > 0'>
     <h4>Click on a word to display its synonyms</h4>
     <ul>
       <li 
@@ -11,7 +11,7 @@
       {{synonym}}
       </li>
     </ul>
-  </div>
+  </section>
 </template>
 
 <script>
@@ -27,3 +27,7 @@ export default {
 }
 }
 </script>
+
+<style scoped>
+
+</style>
